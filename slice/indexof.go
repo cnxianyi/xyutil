@@ -1,7 +1,7 @@
 package slice
 
-// 返回指定值在切片中第一次出现的下标. 没有则返回-1
-// returns the index of the first occurrent of the specified value in the slice. If not found, returns -1
+// IndexOf 返回指定值在切片中第一次出现的下标. 没有则返回-1
+// IndexOf returns the index of the first current of the specified value in the slice. If not found, returns -1
 func IndexOf[T comparable](sl []T, val T) int {
 
 	var res int = -1
@@ -15,8 +15,8 @@ func IndexOf[T comparable](sl []T, val T) int {
 	return res
 }
 
-// 返回指定值在切片中最后一次出现的下标. 没有则返回-1
-// returns the index of the last occurrent of the specified value in the slice. If not found, returns -1
+// LastIndexOf 返回指定值在切片中最后一次出现的下标. 没有则返回-1
+// LastIndexOf returns the index of the last current of the specified value in the slice. If not found, returns -1
 func LastIndexOf[T comparable](sl []T, val T) int {
 
 	var res int = -1

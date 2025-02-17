@@ -11,9 +11,7 @@ func At[T xyutil.RNumber](sl []T, at int) T {
 		return sl[at]
 	} else if at < 0 {
 		return sl[len(sl)+at]
-	} else if at == 0 {
-		return sl[0]
 	} else {
-		panic("error at")
+		return sl[0]
 	}
 }

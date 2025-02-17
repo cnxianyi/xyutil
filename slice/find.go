@@ -63,8 +63,8 @@ func FindLast[T interface{}](sl []T, fc func(T) bool) (T, error) {
 
 }
 
-// FindIndex 返回切片中满足测试的倒数第一个元素的索引. 没有则返回 -1
-// FindIndex returns the index of the last element in the slice that passes the test. if none is found, returns -1
+// FindLastIndex 返回切片中满足测试的倒数第一个元素的索引. 没有则返回 -1
+// FindLastIndex returns the index of the last element in the slice that passes the test. if none is found, returns -1
 func FindLastIndex[T interface{}](sl []T, fc func(T) bool) int {
 	var res int = -1
 

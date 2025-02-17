@@ -13,6 +13,6 @@ func Pop[T interface{}](sl *[]T) T {
 // Push 在切片末尾添加元素. 返回更新后的切片长度
 // Push add element in the last at slice. returns new slice's length
 func Push[T interface{}](sl *[]T, val T) int {
-	*sl = append((*sl), val)
+	*sl = append(*sl, val)
 	return len(*sl)
 }
