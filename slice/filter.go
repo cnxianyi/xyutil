@@ -2,7 +2,7 @@ package slice
 
 // Filter 返回 满足切片中满足测试的元素的 浅拷贝
 // Filter returns a shallow copy of elements in the slice that pass the test
-func Filter[T interface{}](sl []T, fc func(T) bool) []T {
+func Filter[T any](sl []T, fc func(T) bool) []T {
 
 	var res []T
 

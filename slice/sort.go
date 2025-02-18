@@ -25,7 +25,7 @@ func SortByMath[T xyutil.RNumber](sl *[]T) {
 
 // 根据自定义规则插入排序数组. 修改原数组. 自定义规则需要传入 前值和当前值,返回bool
 // Sorts the slice based on custom rules, modifying the original slice. The custom rule function takes two arguments (previous value and current value) and returns a boolean.
-func Sort[T interface{}](sl *[]T, fc func(a T, b T) bool) {
+func Sort[T any](sl *[]T, fc func(a T, b T) bool) {
 	for i := range *sl {
 		preIndex := i - 1
 		current := (*sl)[i]
@@ -63,7 +63,7 @@ func ToSortedByMath[T xyutil.RNumber](sl []T) []T {
 
 // ToSort 根据自定义规则插入排序数组. 返回浅拷贝. 自定义规则需要传入 前值和当前值,返回bool
 // ToSort the slice based on custom rules, returns a shallow copy of the slice. The custom rule function takes two arguments (previous value and current value) and returns a boolean.
-func ToSort[T interface{}](sl []T, fc func(a T, b T) bool) []T {
+func ToSort[T any](sl []T, fc func(a T, b T) bool) []T {
 	var res []T = CopyWithIn(sl)
 
 	for i := range res {

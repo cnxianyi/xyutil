@@ -2,7 +2,7 @@ package slice
 
 // Concat 合并多个slice
 // Concat concat more slice
-func Concat[T interface{}](sls [][]T) []T {
+func Concat[T any](sls [][]T) []T {
 
 	var res []T
 

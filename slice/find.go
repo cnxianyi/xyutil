@@ -4,7 +4,7 @@ import "fmt"
 
 // Find 返回切片中第一个满足测试的值. 如果没有则返回 error undefined
 // Find returns the first element in the slice that passes the test. if none is found, returns an error "undefined"
-func Find[T interface{}](sl []T, fc func(T) bool) (T, error) {
+func Find[T any](sl []T, fc func(T) bool) (T, error) {
 
 	var res T
 	var ok bool = false
@@ -27,7 +27,7 @@ func Find[T interface{}](sl []T, fc func(T) bool) (T, error) {
 
 // FindIndex 返回切片中满足测试的第一个元素的索引. 没有则返回 -1
 // FindIndex returns the index of the first element in the slice that passes the test. if none is found, returns -1
-func FindIndex[T interface{}](sl []T, fc func(T) bool) int {
+func FindIndex[T any](sl []T, fc func(T) bool) int {
 	var res int = -1
 
 	for i := 0; i < len(sl); i++ {
@@ -42,7 +42,7 @@ func FindIndex[T interface{}](sl []T, fc func(T) bool) int {
 
 // FindLast 返回切片中倒数第一个满足测试的值. 如果没有则返回 error undefined
 // FindLast returns the last element in the slice that passes the test. if none is found, returns an error "undefined"
-func FindLast[T interface{}](sl []T, fc func(T) bool) (T, error) {
+func FindLast[T any](sl []T, fc func(T) bool) (T, error) {
 
 	var res T
 	var ok bool = false
@@ -65,7 +65,7 @@ func FindLast[T interface{}](sl []T, fc func(T) bool) (T, error) {
 
 // FindLastIndex 返回切片中满足测试的倒数第一个元素的索引. 没有则返回 -1
 // FindLastIndex returns the index of the last element in the slice that passes the test. if none is found, returns -1
-func FindLastIndex[T interface{}](sl []T, fc func(T) bool) int {
+func FindLastIndex[T any](sl []T, fc func(T) bool) int {
 	var res int = -1
 
 	for i := len(sl) - 1; i >= 0; i-- {
