@@ -12,3 +12,14 @@ func Reverse[T interface{}](sl *[]T) *[]T {
 	*sl = cache
 	return sl
 }
+
+// ToReverse 返回反转后的切片的拷贝.
+// ToReverse returns a copy of the slice with its elements reversed.
+func ToReverse[T interface{}](sl []T) []T {
+	var cache []T
+
+	for i := len(sl) - 1; i >= 0; i-- {
+		Push(&cache, sl[i])
+	}
+	return cache
+}
